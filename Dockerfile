@@ -10,10 +10,12 @@ LABEL org.label-schema.name="kubectl-in-docker" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
 
-# The stable kubectl can be found:
+# The stable kubectl can be found via:
 # https://storage.googleapis.com/kubernetes-release/release/stable.txt
+
 ENV KUBE_STABLE_VERSION="v1.16.2"
 
+# Install kubectl
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl \
  && curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_STABLE_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
