@@ -5,7 +5,7 @@ LABEL maintainer="Eric Wu"
 ARG BUILD_DATE
 
 # Metadata
-LABEL org.label-schema.name = "kubectl-in-docker" \
+LABEL org.label-schema.name="kubectl-in-docker" \
       org.label-schema.vcs-url="https://github.com/ibso-ml-deep-learnnig/kubectl-in-docker" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
